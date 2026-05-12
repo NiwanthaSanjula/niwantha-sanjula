@@ -24,7 +24,7 @@ const PROJECTS_DATA = [
         description: "A complete food ordering platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
         tech: ["Next.js", "SSR", "Stripe", "Tailwind", "AuthJS", "Zustand"],
         image: "/Arachchi-resturant.png",
-        github: "#",
+        github: "https://github.com/NiwanthaSanjula/arachchiresturant",
     },
     {
         id: "03",
@@ -32,7 +32,7 @@ const PROJECTS_DATA = [
         type: "SYSTEM ARCHITECTURE / MONOREPO",
         description: "An enterprise-grade healthcare management system. Built to securely route sensitive patient data, automate appointment scheduling flows, and maintain real-time medical inventory tracking.",
         tech: ["Next.js", "Supabase", "PostgreSQL", "Prisma", "RBAC"],
-        image: "/clinc-management.png",
+        image: "https://github.com/NiwanthaSanjula/clinic-management-system-Supabase",
         github: "#",
     },
     {
