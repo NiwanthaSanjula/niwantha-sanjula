@@ -32,8 +32,8 @@ const PROJECTS_DATA = [
         type: "SYSTEM ARCHITECTURE / MONOREPO",
         description: "An enterprise-grade healthcare management system. Built to securely route sensitive patient data, automate appointment scheduling flows, and maintain real-time medical inventory tracking.",
         tech: ["Next.js", "Supabase", "PostgreSQL", "Prisma", "RBAC"],
-        image: "https://github.com/NiwanthaSanjula/clinic-management-system-Supabase",
-        github: "#",
+        image: "/clinic-management.png",
+        github: "https://github.com/NiwanthaSanjula/clinic-management-system-Supabase",
     },
     {
         id: "04",
