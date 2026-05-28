@@ -182,7 +182,7 @@ export default function Contact() {
                                         height={20}
                                     />
                                     <a href="https://wa.me/947XXXXXXXX" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                                        +94 76 3983 136
+                                        +94 76 3982 136
                                     </a>
                                 </div>
 
