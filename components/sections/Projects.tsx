@@ -13,7 +13,7 @@ const PROJECTS_DATA = [
         title: "Rajarata Furniture ERP & POS System",
         type: "FULL-STACK / ERP & POS",
         description: "A comprehensive furniture management platform equipped with a live administrative dashboard. Engineered to handle dynamic furniture rendering, real-time order status tracking, and centralized furniture operations.",
-        tech: ["Next.js", "Java Springboot", "PostgreSQL", "AI Integration", "Real-Time Sync"],
+        tech: ["Next.js", "Java Springboot", "PostgreSQL", "Real-Time Sync", "JWT", "REST API"],
         image: "/Rajarata-furniture.jpg",
         github: "#",
     },
