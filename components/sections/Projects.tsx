@@ -23,7 +23,7 @@ const PROJECTS_DATA = [
         type: "FULL-STACK / ERP & Inventory Management",
         description: "A comprehensive restaurant management platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
         tech: ["React", "Node.js", "Express.js", "MongoDb"],
-        image: "/Restaurant_ERP.png",
+        image: "/Restaurant_ERP.jpg",
         github: "https://github.com/NiwanthaSanjula/arachchiresturant",
     },
     {
