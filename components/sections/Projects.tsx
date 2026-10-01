@@ -14,7 +14,7 @@ const PROJECTS_DATA = [
         type: "FULL-STACK / ERP & POS",
         description: "A comprehensive furniture management platform equipped with a live administrative dashboard. Engineered to handle dynamic furniture rendering, real-time order status tracking, and centralized furniture operations.",
         tech: ["Next.js", "Java Springboot", "PostgreSQL", "AI Integration", "Real-Time Sync"],
-        image: "/Rajarata-furniture.png",
+        image: "/Rajarata-furniture.jpg",
         github: "#",
     },
     {
@@ -23,7 +23,7 @@ const PROJECTS_DATA = [
         type: "FULL-STACK / ERP & Inventory Management",
         description: "A comprehensive restaurant management platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
         tech: ["React", "Node.js", "Express.js", "MongoDb"],
-        image: "/Restaurant_ERP.jpg",
+        image: "/Restaurant_ERP.png",
         github: "https://github.com/NiwanthaSanjula/arachchiresturant",
     },
     {
