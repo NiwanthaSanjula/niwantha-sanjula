@@ -9,22 +9,31 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Pre-filled with your actual development history
 const PROJECTS_DATA = [
     {
+        id: "ONGOING",
+        title: "Rajarata Furniture ERP & POS System",
+        type: "FULL-STACK / ERP & POS",
+        description: "A comprehensive furniture management platform equipped with a live administrative dashboard. Engineered to handle dynamic furniture rendering, real-time order status tracking, and centralized furniture operations.",
+        tech: ["Next.js", "Java Springboot", "PostgreSQL", "AI Integration", "Real-Time Sync"],
+        image: "/Rajarata-furniture.png",
+        github: "#",
+    },
+    {
         id: "01",
+        title: "RESTAURANT MANAGEMENT SYSTEM",
+        type: "FULL-STACK / ERP & Inventory Management",
+        description: "A comprehensive restaurant management platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
+        tech: ["React", "Node.js", "Express.js", "MongoDb"],
+        image: "/Restaurant_ERP.png",
+        github: "https://github.com/NiwanthaSanjula/arachchiresturant",
+    },
+    {
+        id: "02",
         title: "SOLESTYLE SHOE STORE",
         type: "FULL-STACK / DASHBOARD",
         description: "A comprehensive e-commerce ecosystem featuring a dedicated admin control panel. Engineered to handle secure product inventory, order routing, and dynamic user carts with real-time data synchronization.",
         tech: ["React", "MongoDB", "Express.js", "Node.js", "Stripe payment", "REST API", "JWT"],
         image: "/shoe-store-dashboard.png",
         github: "https://github.com/NiwanthaSanjula/the-foot-shop",
-    },
-    {
-        id: "02",
-        title: "ARACHCHI RESTAURANT SYSTEM",
-        type: "FULL-STACK / ORDER ROUTING",
-        description: "A complete food ordering platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
-        tech: ["Next.js", "SSR", "Stripe", "Tailwind", "AuthJS", "Zustand"],
-        image: "/Arachchi-resturant.png",
-        github: "https://github.com/NiwanthaSanjula/arachchiresturant",
     },
     {
         id: "03",
@@ -44,15 +53,6 @@ const PROJECTS_DATA = [
         image: "/warrior-fitness.png",
         github: "https://github.com/NiwanthaSanjula/WarriorFitnessOMS",
     },
-    {
-        id: "ONGOING",
-        title: "FARM MANAGEMENT CLOUD",
-        type: "FULL-STACK / DATA ROUTING",
-        description: "A cloud-native agricultural platform tailored for the Sri Lankan sector. Integrates a high-performance Java Spring Boot backend with ML algorithms to deliver real-time environmental monitoring and automated yield forecasting.",
-        tech: ["Next.js", "Spring Boot", "PostgreSQL", "AI Integration", "Real-Time Sync"],
-        image: "/farm-management.jpg",
-        github: "#",
-    }
 ];
 
 export default function Projects() {
