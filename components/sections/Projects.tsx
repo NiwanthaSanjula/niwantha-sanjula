@@ -6,52 +6,56 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Pre-filled with your actual development history
-const PROJECTS_DATA = [
-    {
-        id: "ONGOING",
-        title: "Rajarata Furniture ERP & POS System",
-        type: "FULL-STACK / ERP & POS",
-        description: "A comprehensive furniture management platform equipped with a live administrative dashboard. Engineered to handle dynamic furniture rendering, real-time order status tracking, and centralized furniture operations.",
-        tech: ["Next.js", "Java Springboot", "PostgreSQL", "Real-Time Sync", "JWT", "REST API"],
-        image: "/Rajarata-furniture.jpg",
-        github: "#",
-    },
+type Project = {
+    id: string;
+    title: string;
+    type: string;
+    description: string;
+    tech: string[];
+    image: string;
+    github: string;
+    live?: string;
+};
+
+const PROJECTS_DATA: Project[] = [
     {
         id: "01",
-        title: "RESTAURANT MANAGEMENT SYSTEM",
-        type: "FULL-STACK / ERP & Inventory Management",
-        description: "A comprehensive restaurant management platform equipped with a live administrative dashboard. Engineered to handle dynamic menu rendering, real-time order status tracking, and centralized restaurant operations.",
-        tech: ["React", "Node.js", "Express.js", "MongoDb"],
-        image: "/Restaurant_ERP.png",
-        github: "https://github.com/NiwanthaSanjula/arachchiresturant",
+        title: "LA TAVOLA - RESTAURANT MANAGEMENT & POS",
+        type: "FULL-STACK / RESTAURANT OPERATIONS",
+        description: "Full-stack POS and operations platform for sales, purchasing, inventory, customers, and suppliers. Includes JWT and role-based access, transactional checkout with idempotent requests, and Jest regression tests.",
+        tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "Tailwind CSS", "JWT", "Jest"],
+        image: "/Restaurant_ERP .png",
+        github: "https://github.com/NiwanthaSanjula/restaurant-ERP/",
+        live: "https://restaurant-erp-one.vercel.app/",
     },
     {
         id: "02",
+        title: "WARRIOR FITNESS - GYM MEMBER MANAGEMENT & POS",
+        type: "FULL-STACK / GYM OPERATIONS",
+        description: "Gym operations platform for member registration, renewals, attendance, invoicing, payments, and equipment maintenance. Adds JWT and role-based permissions, session revocation, financial reporting, and daily cash reconciliation.",
+        tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Vitest", "Supertest"],
+        image: "/warrior-fitness.png",
+        github: "https://github.com/NiwanthaSanjula/warrior-fitness",
+        live: "https://warrior-fitness-demo.vercel.app/",
+    },
+    {
+        id: "03",
+        title: "RANDENIYA RESORT - HOTEL BOOKING",
+        type: "RESORT / BOOKING EXPERIENCE",
+        description: "A resort landing page with a booking-focused experience for exploring rooms, availability, and stay reservations. Built with Next.js, TypeScript, Tailwind CSS, and GSAP.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+        image: "/randeniya-resort.png",
+        github: "https://github.com/NiwanthaSanjula/randeniyalakeresort",
+        live: "https://randeniyalakeresort.vercel.app/",
+    },
+    {
+        id: "04",
         title: "SOLESTYLE SHOE STORE",
         type: "FULL-STACK / DASHBOARD",
         description: "A comprehensive e-commerce ecosystem featuring a dedicated admin control panel. Engineered to handle secure product inventory, order routing, and dynamic user carts with real-time data synchronization.",
         tech: ["React", "MongoDB", "Express.js", "Node.js", "Stripe payment", "REST API", "JWT"],
         image: "/shoe-store-dashboard.png",
         github: "https://github.com/NiwanthaSanjula/the-foot-shop",
-    },
-    {
-        id: "03",
-        title: "CLINIC OPERATIONS PLATFORM",
-        type: "SYSTEM ARCHITECTURE / MONOREPO",
-        description: "An enterprise-grade healthcare management system. Built to securely route sensitive patient data, automate appointment scheduling flows, and maintain real-time medical inventory tracking.",
-        tech: ["Next.js", "Supabase", "PostgreSQL", "Prisma", "RBAC"],
-        image: "/clinc-management.png",
-        github: "https://github.com/NiwanthaSanjula/clinic-management-system-Supabase",
-    },
-    {
-        id: "04",
-        title: "WARRIOR FITNESS CORE",
-        type: "API & LOGIC",
-        description: "A specialized backend management engine for gym operations. Handles secure member authentication, dynamic subscription tier routing, and automated class scheduling logic.",
-        tech: ["React", "Node.js", "Express", "MongoDB", "Mongoose", "RBAC"],
-        image: "/warrior-fitness.png",
-        github: "https://github.com/NiwanthaSanjula/WarriorFitnessOMS",
     },
 ];
 
@@ -203,10 +207,19 @@ export default function Projects() {
                                 </div>
 
                                 {/* Action Buttons */}
-                                <div className="flex gap-4">
-                                    <Link href={project.github} target="_blank" className="px-6 py-2.5 border border-cyan-200/20 text-cyan-200/50 text-xs font-bold tracking-[0.15em] uppercase hover:border-cyan-400/50 hover:text-cyan-200 transition-all" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-                                        <span>View Source</span>
+                                <div className="flex flex-wrap gap-4">
+                                    <Link href={project.github} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 border border-cyan-200/20 text-cyan-200/50 text-xs font-bold tracking-[0.15em] uppercase hover:border-cyan-400/50 hover:text-cyan-200 transition-all" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
+                                        <span>GitHub</span>
                                     </Link>
+                                    {project.live ? (
+                                        <Link href={project.live} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 border border-cyan-200/20 text-cyan-200/50 text-xs font-bold tracking-[0.15em] uppercase hover:border-cyan-400/50 hover:text-cyan-200 transition-all" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
+                                            <span>Live Demo</span>
+                                        </Link>
+                                    ) : (
+                                        <button type="button" disabled className="px-6 py-2.5 border border-cyan-200/10 text-cyan-200/30 text-xs font-bold tracking-[0.15em] uppercase cursor-not-allowed" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
+                                            <span>Live Demo Soon</span>
+                                        </button>
+                                    )}
                                 </div>
                             </div>
 
@@ -241,6 +254,5 @@ export default function Projects() {
         </section>
     );
 }
-
 
 
